@@ -15,4 +15,26 @@
  *
  */
 
-include ':app', ':thunder-sdk'
+package com.srenon.thunder.sdk;
+
+import com.srenon.thunder.sdk.callback.InteractionCallback;
+import com.srenon.thunder.sdk.domain.model.InteractionResponse;
+
+import android.support.annotation.Nullable;
+import android.support.annotation.StringDef;
+
+import java.lang.annotation.Retention;
+import java.lang.annotation.RetentionPolicy;
+
+import io.reactivex.Observable;
+
+/**
+ * Created by Seb on 01/10/2017.
+ */
+
+public interface ThunderSdkActions {
+
+    void sendInteraction(String interaction, @Nullable final InteractionCallback callback);
+
+    Observable<InteractionResponse> sendInteraction(String interaction);
+}

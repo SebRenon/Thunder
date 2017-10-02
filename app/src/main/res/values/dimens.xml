@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <!--
   ~  Copyright (C) 2017 Sebastien Renon Open Source Project
   ~
@@ -15,10 +16,7 @@
   ~
   -->
 
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-          package="com.srenon.thunder.sdk">
-
-    <application android:allowBackup="true"
-                 android:label="@string/thunder_app_name"
-                 android:supportsRtl="true"/>
-</manifest>
+<resources>
+    <dimen name="padding_content">16dp</dimen>
+    <dimen name="row_margin_bottom">8dp</dimen>
+</resources>

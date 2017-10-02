@@ -15,4 +15,20 @@
  *
  */
 
-include ':app', ':thunder-sdk'
+package com.srenon.thunder.sdk.network.service.interaction.request;
+
+import android.support.annotation.NonNull;
+
+/**
+ * The model for the Request
+ * Created by Seb on 30/09/2017.
+ */
+
+public class InteractionBody {
+
+    private String uri;
+
+    public InteractionBody(@NonNull String touchPoint, @NonNull String interactionPath) {
+        this.uri = String.format("%s/%s", touchPoint, interactionPath);
+    }
+}

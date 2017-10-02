@@ -15,4 +15,20 @@
  *
  */
 
-include ':app', ':thunder-sdk'
+package com.srenon.thunder.sdk.domain.interactor;
+
+import com.srenon.thunder.sdk.domain.model.InteractionResponse;
+
+import android.support.annotation.NonNull;
+
+import io.reactivex.Observable;
+
+/**
+ * Definition of the UseCase contract so the consumer knows what to pass and expect in return
+ * Created by Seb on 01/10/2017.
+ */
+
+public interface InteractionUseCase {
+
+    Observable<InteractionResponse> sendInteraction(@NonNull String interaction);
+}

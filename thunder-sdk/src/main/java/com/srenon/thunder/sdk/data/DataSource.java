@@ -15,4 +15,21 @@
  *
  */
 
-include ':app', ':thunder-sdk'
+package com.srenon.thunder.sdk.data;
+
+import com.srenon.thunder.sdk.domain.model.InteractionResponse;
+
+import android.support.annotation.NonNull;
+import android.support.annotation.Nullable;
+
+import io.reactivex.Observable;
+
+/**
+ * Contract for the Data Sources used by the Data Repository
+ * Created by Seb on 01/10/2017.
+ */
+
+public interface DataSource {
+
+    Observable<InteractionResponse> getOptimization(@NonNull String touchPoint, @NonNull String interaction, @NonNull String siteKey, @Nullable String tid);
+}

@@ -15,4 +15,28 @@
  *
  */
 
-include ':app', ':thunder-sdk'
+package com.srenon.thunder.sdk.di;
+
+import com.srenon.thunder.sdk.domain.client.Consumer;
+
+import android.support.annotation.NonNull;
+
+/**
+ * Class to manage the Dagger component used by the SDK.
+ *
+ * Created by Seb on 01/10/2017.
+ */
+
+public final class ThunderRegistry {
+
+    private static ThunderComponent sComponent;
+
+    public static void init(@NonNull Consumer consumer) {
+        // Build the component once, then return the Singleton
+        sComponent = DaggerThunderComponent.builder().consumer(consumer).build();
+    }
+
+    public static ThunderComponent getComponent() {
+        return sComponent;
+    }
+}

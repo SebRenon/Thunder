@@ -1,3 +1,26 @@
+<!--
+  ~  Copyright (C) 2017 Sebastien Renon Open Source Project
+  ~
+  ~  Licensed under the Apache License, Version 2.0 (the "License");
+  ~  you may not use this file except in compliance with the License.
+  ~  You may obtain a copy of the License at
+  ~
+  ~       http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~  Unless required by applicable law or agreed to in writing, software
+  ~  distributed under the License is distributed on an "AS IS" BASIS,
+  ~  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~  See the License for the specific language governing permissions and
+  ~  limitations under the License.
+  ~
+  -->
+
 <resources>
-    <string name="app_name">Thunder</string>
+    <string name="app_name">Thunder (Demo)</string>
+    <string name="status_code">Status Code:</string>
+    <string name="tid">Tid:</string>
+    <string name="directives">Directives:</string>
+    <string name="test_login_interaction">Test login interaction</string>
+    <string name="test_home_interaction">Test home interaction</string>
+    <string name="activity_details">Details</string>
 </resources>

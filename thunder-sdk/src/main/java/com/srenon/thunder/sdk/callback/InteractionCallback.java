@@ -15,4 +15,19 @@
  *
  */
 
-include ':app', ':thunder-sdk'
+package com.srenon.thunder.sdk.callback;
+
+import com.srenon.thunder.sdk.domain.model.InteractionResponse;
+
+/**
+ * Created by Seb on 30/09/2017.
+ *
+ * Function to communicate with the client during an interaction flow
+ */
+
+public interface InteractionCallback {
+
+    void onSuccess(InteractionResponse response);
+
+    void onError(String error);
+}

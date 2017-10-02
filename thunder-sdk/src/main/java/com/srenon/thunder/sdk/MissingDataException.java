@@ -15,4 +15,15 @@
  *
  */
 
-include ':app', ':thunder-sdk'
+package com.srenon.thunder.sdk;
+
+/**
+ * Created by Seb on 01/10/2017.
+ */
+
+public class MissingDataException extends Exception {
+
+    public MissingDataException(String message) {
+        super(message);
+    }
+}
