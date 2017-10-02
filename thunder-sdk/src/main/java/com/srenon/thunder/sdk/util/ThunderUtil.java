@@ -21,8 +21,6 @@ import com.google.common.base.Strings;
 
 import com.srenon.thunder.sdk.MissingDataException;
 
-import android.text.TextUtils;
-
 /**
  * Created by Seb on 01/10/2017.
  *

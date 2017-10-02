@@ -42,7 +42,7 @@ public final class DataRepositoryImpl implements DataRepository {
     }
 
     @Override
-    public Observable<InteractionResponse> getOptimization(@NonNull String touchPoint, @NonNull String interaction, @NonNull String siteKey, @NonNull String tid) {
-        return mDataSource.getOptimization(touchPoint, interaction, siteKey, tid);
+    public Observable<InteractionResponse> sentInteraction(@NonNull String touchPoint, @NonNull String interaction, @NonNull String siteKey, @NonNull String tid) {
+        return mDataSource.sendInteraction(touchPoint, interaction, siteKey, tid);
     }
 }

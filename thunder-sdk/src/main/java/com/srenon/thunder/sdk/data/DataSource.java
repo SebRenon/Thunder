@@ -31,5 +31,5 @@ import io.reactivex.Observable;
 
 public interface DataSource {
 
-    Observable<InteractionResponse> getOptimization(@NonNull String touchPoint, @NonNull String interaction, @NonNull String siteKey, @Nullable String tid);
+    Observable<InteractionResponse> sendInteraction(@NonNull String touchPoint, @NonNull String interaction, @NonNull String siteKey, @Nullable String tid);
 }

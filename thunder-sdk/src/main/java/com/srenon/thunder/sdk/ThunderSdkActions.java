@@ -34,7 +34,21 @@ import io.reactivex.Observable;
 
 public interface ThunderSdkActions {
 
-    void sendInteraction(String interaction, @Nullable final InteractionCallback callback);
+    String INTERACTION_HOME = "homeView";
 
-    Observable<InteractionResponse> sendInteraction(String interaction);
+    String INTERACTION_LOGIN = "loginView";
+
+    void sendInteraction(@Interactions String interaction, @Nullable final InteractionCallback callback);
+
+    Observable<InteractionResponse> sendInteraction(@Interactions String interaction);
+
+
+    @StringDef(value = {
+            INTERACTION_HOME,
+            INTERACTION_LOGIN
+    })
+    @Retention(RetentionPolicy.SOURCE)
+    @interface Interactions {
+
+    }
 }

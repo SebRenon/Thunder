@@ -43,5 +43,5 @@ public interface InteractionServices {
             "Datamimetype: application/json"
     })
     @POST("one/oauth1/rt/api/2.0/interaction")
-    Observable<InteractionResponse> fetchQuote(@Body InteractionBody interactionBody, @Query("sk") String siteKey, @Nullable @Query("tid") String tid);
+    Observable<InteractionResponse> sendInteraction(@Body InteractionBody interactionBody, @Query("sk") String siteKey, @Nullable @Query("tid") String tid);
 }

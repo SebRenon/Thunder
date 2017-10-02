@@ -17,9 +17,9 @@
 
 package com.srenon.thunder.sdk.consumer.impl;
 
-import com.srenon.thunder.sdk.domain.client.Consumer;
+import com.google.common.base.Strings;
 
-import android.text.TextUtils;
+import com.srenon.thunder.sdk.domain.client.Consumer;
 
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
@@ -101,7 +101,7 @@ public final class ConsumerImpl implements Consumer {
 
     @Override
     public boolean hasTid() {
-        return !TextUtils.isEmpty(mTid);
+        return !Strings.isNullOrEmpty(mTid);
     }
 
     @Nonnull

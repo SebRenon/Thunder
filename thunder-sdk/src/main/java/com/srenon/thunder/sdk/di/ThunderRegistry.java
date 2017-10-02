@@ -33,7 +33,9 @@ public final class ThunderRegistry {
 
     public static void init(@NonNull Consumer consumer) {
         // Build the component once, then return the Singleton
-        sComponent = DaggerThunderComponent.builder().consumer(consumer).build();
+        if (sComponent == null) {
+            sComponent = DaggerThunderComponent.builder().consumer(consumer).build();
+        }
     }
 
     public static ThunderComponent getComponent() {

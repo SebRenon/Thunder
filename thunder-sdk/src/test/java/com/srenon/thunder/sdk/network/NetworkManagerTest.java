@@ -15,21 +15,23 @@
  *
  */
 
-package com.srenon.thunder.sdk.domain.repository;
+package com.srenon.thunder.sdk.network;
 
-import com.srenon.thunder.sdk.domain.model.InteractionResponse;
+import com.srenon.thunder.sdk.network.service.interaction.InteractionServices;
 
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
+import org.junit.Test;
 
-import io.reactivex.Observable;
+import static org.junit.Assert.assertNotNull;
 
 /**
- * Defintion of the contract for the Data Repository
- * Created by Seb on 01/10/2017.
+ * Created by Seb on 02/10/2017.
  */
 
-public interface DataRepository {
+public class NetworkManagerTest {
 
-    Observable<InteractionResponse> sentInteraction(@NonNull String touchPoint, @NonNull String interaction, @NonNull String siteKey, @Nullable String tid);
+    @Test
+    public void createService() {
+        NetworkManager networkManager = new NetworkManager("", "", "");
+        assertNotNull(networkManager.createService(InteractionServices.class));
+    }
 }

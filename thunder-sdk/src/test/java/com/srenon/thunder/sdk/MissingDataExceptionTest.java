@@ -15,21 +15,21 @@
  *
  */
 
-package com.srenon.thunder.sdk.domain.repository;
+package com.srenon.thunder.sdk;
 
-import com.srenon.thunder.sdk.domain.model.InteractionResponse;
+import org.junit.Test;
 
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
-
-import io.reactivex.Observable;
+import static org.junit.Assert.assertEquals;
 
 /**
- * Defintion of the contract for the Data Repository
- * Created by Seb on 01/10/2017.
+ * Created by Seb on 02/10/2017.
  */
 
-public interface DataRepository {
+public class MissingDataExceptionTest {
 
-    Observable<InteractionResponse> sentInteraction(@NonNull String touchPoint, @NonNull String interaction, @NonNull String siteKey, @Nullable String tid);
+    @Test
+    public void construction() {
+        MissingDataException missingDataException = new MissingDataException("abcd");
+        assertEquals(missingDataException.getMessage(), "abcd");
+    }
 }

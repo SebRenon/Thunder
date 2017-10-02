@@ -31,4 +31,8 @@ public class InteractionBody {
     public InteractionBody(@NonNull String touchPoint, @NonNull String interactionPath) {
         this.uri = String.format("%s/%s", touchPoint, interactionPath);
     }
+
+    public String getUri() {
+        return uri;
+    }
 }

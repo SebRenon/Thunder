@@ -18,10 +18,7 @@
 package com.srenon.thunder.sdk.domain.client;
 
 
-import android.support.annotation.NonNull;
-
 import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
 
 /**
  * Interface for the Consumer manager, this is used by the UseCase so

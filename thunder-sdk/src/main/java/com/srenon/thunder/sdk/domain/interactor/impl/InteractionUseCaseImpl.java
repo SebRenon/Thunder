@@ -56,7 +56,7 @@ public final class InteractionUseCaseImpl implements InteractionUseCase {
     public Observable<InteractionResponse> sendInteraction(@NonNull String interaction) {
         // Here we ask the Data layer (Data Repository) to send an interaction
         // we don't know how it's done, we don't need to.
-        return mDataRepository.getOptimization(mConsumer.getTouchPoint(), interaction, mConsumer.getSiteKey(), mConsumer.getTid())
+        return mDataRepository.sentInteraction(mConsumer.getTouchPoint(), interaction, mConsumer.getSiteKey(), mConsumer.getTid())
                 .map(new Function<InteractionResponse, InteractionResponse>() {
                     @Override
                     public InteractionResponse apply(@io.reactivex.annotations.NonNull InteractionResponse interactionResponse) throws Exception {

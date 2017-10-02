@@ -26,11 +26,7 @@ import com.srenon.thunder.sdk.util.ThunderUtil;
 
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
-import android.support.annotation.StringDef;
 import android.util.Log;
-
-import java.lang.annotation.Retention;
-import java.lang.annotation.RetentionPolicy;
 
 import io.reactivex.Observable;
 import io.reactivex.observers.DefaultObserver;
@@ -42,10 +38,6 @@ import io.reactivex.observers.DefaultObserver;
  */
 
 public final class ThunderSdk implements ThunderSdkActions {
-
-    public final static String INTERACTION_HOME = "homeView";
-
-    public final static String INTERACTION_LOGIN = "loginView";
 
     private static ThunderSdk sInstance;
 
@@ -125,14 +117,5 @@ public final class ThunderSdk implements ThunderSdkActions {
     @Override
     public Observable<InteractionResponse> sendInteraction(@Interactions String interaction) {
         return ThunderRegistry.getComponent().provideInteractionUseCase().sendInteraction(interaction);
-    }
-
-    @StringDef(value = {
-            INTERACTION_HOME,
-            INTERACTION_LOGIN
-    })
-    @Retention(RetentionPolicy.SOURCE)
-    @interface Interactions {
-
     }
 }

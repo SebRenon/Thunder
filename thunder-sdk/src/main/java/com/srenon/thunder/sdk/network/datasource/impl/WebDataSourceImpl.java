@@ -41,12 +41,12 @@ public final class WebDataSourceImpl implements DataSource {
     }
 
     @Override
-    public Observable<InteractionResponse> getOptimization(@NonNull String touchPoint, @NonNull String interaction, @NonNull String siteKey, @Nullable String tid) {
+    public Observable<InteractionResponse> sendInteraction(@NonNull String touchPoint, @NonNull String interaction, @NonNull String siteKey, @Nullable String tid) {
         // Build the body of the request
         InteractionBody interactionBody = new InteractionBody(touchPoint, interaction);
         // Build the request and get back an Observable
         // at this time the request is not trigger,
         // it's only once the Observable has been subscribed on that the request is executed
-        return mInteractionServices.fetchQuote(interactionBody, siteKey, tid);
+        return mInteractionServices.sendInteraction(interactionBody, siteKey, tid);
     }
 }
