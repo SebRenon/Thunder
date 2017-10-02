@@ -32,11 +32,14 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public final class NetworkManager {
 
-    private static final String API_BASE_URL = "https://onedemo.thunderhead.com/";
+    private Retrofit.Builder builder;
 
-    private Retrofit.Builder builder = new Retrofit.Builder().baseUrl(API_BASE_URL).addCallAdapterFactory(RxJava2CallAdapterFactory.create()).addConverterFactory(GsonConverterFactory.create());
+    public NetworkManager(@NonNull String baseUrl, @NonNull String apiKey, @NonNull String loginId, @NonNull String sharedSecret) {
 
-    public NetworkManager(@NonNull String apiKey, @NonNull String loginId, @NonNull String sharedSecret) {
+        builder = new Retrofit.Builder()
+                .baseUrl(baseUrl)
+                .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
+                .addConverterFactory(GsonConverterFactory.create());
 
         // Here we build the interceptor which will add the required Authorization header
         OauthInterceptor interceptor = new OauthInterceptor.Builder()

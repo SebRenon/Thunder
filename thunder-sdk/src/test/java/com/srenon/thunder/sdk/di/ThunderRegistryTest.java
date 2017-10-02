@@ -15,23 +15,35 @@
  *
  */
 
-package com.srenon.thunder.sdk.network;
+package com.srenon.thunder.sdk.di;
 
-import com.srenon.thunder.sdk.network.service.interaction.InteractionServices;
+import com.srenon.thunder.sdk.consumer.impl.ConsumerImpl;
 
 import org.junit.Test;
 
+import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.assertNull;
+import static org.mockito.Mockito.mock;
 
 /**
  * Created by Seb on 02/10/2017.
  */
 
-public class NetworkManagerTest {
+public class ThunderRegistryTest {
+
+    public static void overrideRegistry(ThunderComponent component){
+        ThunderRegistry.setComponent(component);
+    }
 
     @Test
-    public void createService() {
-        NetworkManager networkManager = new NetworkManager("http://baseUrl.com", "", "", "");
-        assertNotNull(networkManager.createService(InteractionServices.class));
+    public void construct() {
+        assertNull(ThunderRegistry.getComponent());
+        ThunderRegistry.init(new ConsumerImpl());
+        assertNotNull(ThunderRegistry.getComponent());
+
+        ThunderComponent component = mock(ThunderComponent.class);
+        ThunderRegistry.setComponent(component);
+        assertEquals(ThunderRegistry.getComponent(), component);
     }
 }

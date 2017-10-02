@@ -1,0 +1,15 @@
+{
+  "statusCode": 200,
+  "tid": "a08b10a4-ead9-7667-9116-add167624b57",
+  "session": "",
+  "trackers": [],
+  "captures": [],
+  "optimizations": [
+    {
+      "data": "eyJhY3Rpb25zIjpbeyJuYW1lIjoiTG9naW4gVmlldyBBY3Rpb24iLCJhc3NldCI6eyJjb250ZW50Ijoie1xuJnF1b3Q7bWVzc2FnZSZxdW90OzomcXVvdDtDb25ncmF0cywgeW91IGhhdmUgcmV0cmlldmVkIHRoZSByZXNwb25zZSBmb3IgdGhlIGxvZ2luIHZpZXcgb3B0aW1pemF0aW9uLiZxdW90O1xufSIsIm1pbWVUeXBlIjoiYXBwbGljYXRpb24vanNvbiIsImNvbnRlbnRVcmwiOm51bGwsInJlc3BvbnNlcyI6W3siY29kZSI6ImRHbGtQV0V3T0dJeE1HRTBMV1ZoWkRrdE56WTJOeTA1TVRFMkxXRmtaREUyTnpZeU5HSTFOeXhoWXoweE1qTTRPRFV5TmpBc1kyNTBQVEV5TkRjd01UZzFPQ3h2Y0QweE1UTXdNakUwT0RJc2NuUTlVRTlUU1ZSSlZrVmZRMHhKUTBzc2MyczlUMDVGTFVWVVUwVTFVakpIU2tRdE1UWXdOdyIsInNlbnRpbWVudCI6InBvc2l0aXZlIiwibGFiZWwiOm51bGwsImltYWdlVXJsIjpudWxsLCJ0YXJnZXRVcmwiOm51bGwsInRhcmdldCI6bnVsbH1dfSwicHJvcG9zaXRpb24iOnsiY29kZSI6IiJ9fV19",
+      "path": "#",
+      "dataMimeType": "application/json",
+      "directives": "REPLACE"
+    }
+  ]
+}

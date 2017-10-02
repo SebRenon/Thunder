@@ -68,6 +68,10 @@ public final class ThunderSdk implements ThunderSdkActions {
         }
     }
 
+    static void destroy() {
+        sInstance = null;
+    }
+
     public static ThunderSdkActions getInstance() {
         if (sInstance == null) {
             Log.e("ThunderSdk", "ThunderSdk must be initialized before getting its instance.");

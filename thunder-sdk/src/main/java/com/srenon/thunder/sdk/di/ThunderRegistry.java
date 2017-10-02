@@ -41,4 +41,8 @@ public final class ThunderRegistry {
     public static ThunderComponent getComponent() {
         return sComponent;
     }
+
+    static void setComponent(@NonNull ThunderComponent component) {
+        sComponent = component;
+    }
 }

@@ -57,6 +57,8 @@ import io.reactivex.schedulers.Schedulers;
 @Module
 public final class ThunderModule {
 
+    private static final String API_BASE_URL = "https://onedemo.thunderhead.com/";
+
     @Singleton
     @Provides
     InteractionUseCase interactionUseCase(Consumer consumer, DataRepository dataRepository, @Named("OBSERVE_ON") Scheduler observeOn, @Named("SUBSCRIBE_ON") Scheduler subscribeOn) {
@@ -84,7 +86,7 @@ public final class ThunderModule {
     @Singleton
     @Provides
     NetworkManager networkManager(Consumer consumer) {
-        return new NetworkManager(consumer.getApiKey(), consumer.getLoginId(), consumer.getSharedSecret());
+        return new NetworkManager(API_BASE_URL, consumer.getApiKey(), consumer.getLoginId(), consumer.getSharedSecret());
     }
 
 
