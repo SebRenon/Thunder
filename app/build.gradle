@@ -42,7 +42,8 @@ android {
 
 dependencies {
 
-    compile project(':thunder-sdk')
+    // Reference to the aar file imported
+    compile project(':thunder-sdk-release')
 
     compile 'com.jakewharton:butterknife:8.8.1'
     annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'

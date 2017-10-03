@@ -15,4 +15,4 @@
  *
  */
 
-include ':app', ':thunder-sdk'
+include ':app', ':thunder-sdk', ':thunder-sdk-release'
