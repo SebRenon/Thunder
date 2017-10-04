@@ -16,7 +16,6 @@
   -->
 
 <resources>
-    <string name="app_name">Thunder (Demo)</string>
     <string name="status_code">Status Code:</string>
     <string name="tid">Tid:</string>
     <string name="directives">Directives:</string>
