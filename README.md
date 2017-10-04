@@ -2,7 +2,7 @@
 
 This project is composed of:
 - thunder-sdk : The source code of the SDK
-- thunder-sdk-release: The generated aar package from the SDK source code
+- thunder-sdk-release: The generated aar package from the SDK source code. Generated from the thunder-sdk module by executing thunder-sdk:assembleRelease
 - app : The sample app to demonstrate how to implement the SDK
 
 # How to use the Thunder SDK
@@ -20,16 +20,6 @@ This project is composed of:
   ```
   // Dependency to the new module
   compile project(':thunder-sdk-release')
-  // Since this is an aar file, the dependencies are not transitive so we need to add them
-  // The right way would be to publish SDK to a private or public maven repo
-  compile 'com.google.guava:guava:20.0'
-  compile 'com.squareup.retrofit2:retrofit:2.3.0'
-  compile 'com.squareup.retrofit2:converter-gson:2.3.0'
-  compile 'io.reactivex.rxjava2:rxjava:2.1.4'
-  compile 'io.reactivex.rxjava2:rxandroid:2.0.1'
-  compile 'com.squareup.retrofit2:adapter-rxjava2:2.3.0'
-  compile 'com.google.dagger:dagger:2.11'
-  compile 'com.google.code.findbugs:jsr305:2.0.1'
   ```
   
 2. In your activity/application class, initialize the SDK by putting the following code:
@@ -89,7 +79,5 @@ In terms of technologies the module uses:
 	- Retrofit to define and execute the requests to the backend
 
 The module is an Android Library because I imagined in the future, we might want to provide UI components or Android specific features... If not, making it a pure Java module wouldn't take too long.
-
-I couldn't find a clear or official way to generate an aar file with all the module's dependencies without publishing it somewhere. If there is one, I would love to know how! :)
 
 I left comments in the code, but let me know if there is any questions!
