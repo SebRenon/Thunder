@@ -68,15 +68,15 @@ This project is composed of:
 # Structure of the SDK
 
 The SDK module is composed of multiple layers:
-	- Domain: This is where the business logic resides. For example, we hanlde the TID requirement there.
-	- Data: Reponsible to trigger the correct Data Source in order to execute the request
-	- Network: Manage the connection to the backend and defines the endpoint
-	- ThunderSDKActions is the interface shared to the Client
+ - Domain: This is where the business logic resides. For example, we hanlde the TID requirement there.
+ - Data: Reponsible to trigger the correct Data Source in order to execute the request
+ - Network: Manage the connection to the backend and defines the endpoint
+ - ThunderSDKActions is the interface shared to the Client
 	
 In terms of technologies the module uses:
-	- RxJava for multithreading and business logic operations
-	- Dagger to manage dependencies injections
-	- Retrofit to define and execute the requests to the backend
+ - RxJava for multithreading and business logic operations
+ - Dagger to manage dependencies injections
+ - Retrofit to define and execute the requests to the backend
 
 The module is an Android Library because I imagined in the future, we might want to provide UI components or Android specific features... If not, making it a pure Java module wouldn't take too long.
 
