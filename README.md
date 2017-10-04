@@ -21,7 +21,7 @@ This project is composed of:
   // Dependency to the new module
   compile project(':thunder-sdk-release')
   // Since this is an aar file, the dependencies are not transitive so we need to add them
-  // The right way would be to publish the dependencies to a private or public maven repo
+  // The right way would be to publish SDK to a private or public maven repo
   compile 'com.google.guava:guava:20.0'
   compile 'com.squareup.retrofit2:retrofit:2.3.0'
   compile 'com.squareup.retrofit2:converter-gson:2.3.0'
