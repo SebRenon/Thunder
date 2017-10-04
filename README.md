@@ -49,7 +49,7 @@ This project is composed of:
   ThunderSdk.getInstance()
   ```
   
-#How to send an interaction and get back the optimizations
+# How to send an interaction and get back the optimizations
 
 1. [As shown here](https://github.com/SebRenon/Thunder/blob/master/app/src/main/java/com/srenon/thunder/MainActivity.java#L77), after initializing the SDK, you can send interaction by using the following code:
 
