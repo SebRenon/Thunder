@@ -18,7 +18,18 @@ This project is composed of:
 3. In your app/build.gradle add:
   
   ```
+  // Dependency to the new module
   compile project(':thunder-sdk-release')
+  // Since this is an aar file, the dependencies are not transitive so we need to add them
+  // The right way would be to publish the dependencies to a private or public maven repo
+  compile 'com.google.guava:guava:20.0'
+  compile 'com.squareup.retrofit2:retrofit:2.3.0'
+  compile 'com.squareup.retrofit2:converter-gson:2.3.0'
+  compile 'io.reactivex.rxjava2:rxjava:2.1.4'
+  compile 'io.reactivex.rxjava2:rxandroid:2.0.1'
+  compile 'com.squareup.retrofit2:adapter-rxjava2:2.3.0'
+  compile 'com.google.dagger:dagger:2.11'
+  compile 'com.google.code.findbugs:jsr305:2.0.1'
   ```
   
 2. In your activity/application class, initialize the SDK by putting the following code:
